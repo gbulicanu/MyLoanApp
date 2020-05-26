@@ -356,7 +356,7 @@ function generateRickProfile(la) {
     riskProfile = "high";
   }
 
-  var summaryText = `Dear ${la.ApplicantName},
+  var summaryText = String.raw`Dear ${la.ApplicantName},
     your application for ${"$" + la.LoanAmount}, ${reviewText}.
     Your risk profile is ${riskProfile}
     Your unique application code is \t${createApplicationId()}`;
