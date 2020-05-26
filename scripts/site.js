@@ -339,7 +339,7 @@ function generateRickProfile(la) {
 
   if (age < 18) {
     reviewText =
-      "your application will not be reviewed, because you have to be 18 years or older.";
+      "your application will not be reviewed, because you have to be 18 years or older";
   } else {
     reviewText = "your application will be reviewed";
   }
