@@ -358,7 +358,18 @@ function generateRickProfile(la) {
 
   var summaryText = `Dear ${la.ApplicantName},
     your application for ${"$" + la.LoanAmount}, ${reviewText}.
-    Your risk profile is ${riskProfile}`;
+    Your risk profile is ${riskProfile}
+    Your unique application code is \t${createApplicationId()}`;
 
   return summaryText;
+}
+
+function createApplicationId() {
+  let result = "";
+  const characters = "ABCDEUVYZabcdrswxyz01789/\\#@$%()*^!";
+  const charactersLength = characters.length;
+  for (let i = 0; i < 8; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
 }
