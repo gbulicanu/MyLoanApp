@@ -356,13 +356,7 @@ function generateRickProfile(la) {
     riskProfile = "high";
   }
 
-  var summaryText =
-    "Dear " +
-    la.ApplicantName +
-    ", " +
-    reviewText +
-    " Your risk profile is " +
-    riskProfile;
+  var summaryText = `Dear ${la.ApplicantName}, ${reviewText} Your risk profile is ${riskProfile}`;
 
   return summaryText;
 }
