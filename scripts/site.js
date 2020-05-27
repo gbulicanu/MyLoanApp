@@ -179,9 +179,9 @@ function getLoanApplicationDataFromInputs() {
 
   la.ApplicantName = document.getElementById("inputName").value;
 
-  var month = document.getElementById("inputDoBMonth").value;
-  var day = document.getElementById("inputDoBDay").value;
-  var year = document.getElementById("inputDoBYear").value;
+  var month = parseInt(document.getElementById("inputDoBMonth").value, 10);
+  var day = parseInt(document.getElementById("inputDoBDay").value, 10);
+  var year = parseInt(document.getElementById("inputDoBYear").value, 10);
 
   var isEmployed = document.getElementById("IsEmployed").checked;
   var hasKids = document.getElementById("HasKids").checked;
@@ -193,7 +193,11 @@ function getLoanApplicationDataFromInputs() {
   la.Factors[2] = hasLoans;
   la.Factors[3] = hasCreditcards;
 
-  if (month != "" && day != "" && year != "") {
+  if (
+    Number.isInteger(month) &&
+    Number.isInteger(day) &&
+    Number.isInteger(year)
+  ) {
     la.ApplicantDateOfBirth = new Date(year, month, day);
   }
 
