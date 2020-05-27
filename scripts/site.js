@@ -268,7 +268,7 @@ function generateRickProfile(la) {
 
   let md = nameAndTitle.endsWith("md");
   let md2 = nameAndTitle.endsWith("m.d");
-  let md3 = nameAndTitle.endsWith("m.d.");
+  let md3 = nameAndTitle.endsWith("m.d.", 4);
 
   if (dr || phd || phd2 || md || md2 || md3) {
     risk = risk - 1;
