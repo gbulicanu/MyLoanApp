@@ -366,11 +366,11 @@ function generateRickProfile(la) {
 
 function highlightText(strings, ...values) {
   let str = "";
-  for (let i = 0; i < strings.length; i++) {
+  for (let i = 0; i < strings.raw.length; i++) {
     if (i > 0) {
       str += `<b>${values[i - 1]}</b>`;
     }
-    str += strings[i];
+    str += strings.raw[i];
   }
   return str;
 }
