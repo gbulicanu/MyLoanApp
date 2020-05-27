@@ -114,7 +114,7 @@ function loadApplication() {
 
     var riskLabel = document.getElementById("riskSummary");
     riskLabel.style.display = "block";
-    riskLabel.innerText = generateRickProfile(la);
+    riskLabel.innerHTML = generateRickProfile(la);
   }
 }
 
