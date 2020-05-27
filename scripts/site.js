@@ -96,6 +96,8 @@ function loadApplication() {
       ...moreArgs
     ] = la.Factors;
 
+    var { Id: applicationId, ApplicantName = "Barry" } = la;
+
     document.getElementById("inputName").value = la.ApplicantName;
     document.getElementById("inputDoBMonth").value =
       la.ApplicantDateOfBirth.getMonth() + 1;
