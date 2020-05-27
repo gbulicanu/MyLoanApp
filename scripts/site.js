@@ -194,9 +194,9 @@ function getLoanApplicationDataFromInputs() {
   la.Factors[3] = hasCreditcards;
 
   if (
-    Number.isInteger(month) &&
-    Number.isInteger(day) &&
-    Number.isInteger(year)
+    Number.isSafeInteger(month) &&
+    Number.isSafeInteger(day) &&
+    Number.isSafeInteger(year)
   ) {
     la.ApplicantDateOfBirth = new Date(year, month, day);
   }
